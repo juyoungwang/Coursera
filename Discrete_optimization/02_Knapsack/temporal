@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Aug 11 21:09:40 2018
+
+@author: juyoungwang
+"""
+
+File_loc = "/Users/juyoungwang/Desktop/GitHub/Coursera/Discrete_optimization/02_Knapsack/05"
+with open(File_loc, 'r') as IDF:
+    ID = IDF.read()
+LINES = ID.split('\n')
+FL = LINES[0].split()
+output = [int(FL[0]), [int(i) for i in LINES[1].split(' ')]]
+print(len(output[1]))
