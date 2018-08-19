@@ -43,7 +43,6 @@ def DP_approach(firstLine, item_count, capacity, items):
 
 
 # Since DP seems to be not appropriate for large size problems, we will solve the problem using rough heuristic algorithm. We will put all items in our knapsack and we will be taking items with high X (variable criteria) until we get a feasible solution. Once we reach the feasible solution, we will stand at the one previous step and we will be seeking for an element to be wiped, which will give us the best feasible value.
-
 def int_ap(x):
     return int(round(x))
 
@@ -105,7 +104,6 @@ def Rough_heuristic(firstLine, item_count, capacity, items):
 
 
 # Although the previous polynomial time approximation gives us a reasonable solution, we would like to pour more time into solving the problem, sacrifying less optimality. To achieve this, we implement Rough_DP. This algorithm consist in taking only n_1 number of items with high X (variable criteria) and n_2 number of itmes with low weight to perform dynamic programming.
-
 def Rough_DP(firstLine, item_count, capacity, items):
     
     # Let's define n_1 and n_2:
@@ -169,7 +167,6 @@ def BB(firstLine, item_count, capacity, items):
 
 
 # Here, we tried to implement a projected gradient method on Euclidean box, having lagrangian relaxation of our problem as the objective function. Unfortunately, this did not work well (or we have to improve it more...).
-
 def LR_function(capacity, value_vec, weight_vec, sol_vec, lda):
     return np.dot(value_vec, sol_vec) + lda*(capacity - np.dot(weight_vec, sol_vec))
 
@@ -192,7 +189,7 @@ def Gradient_projection_approach(firstLine, item_count, capacity, items, lda):
         
     return int(np.dot(value_vector, np.rint(solution_vector))), [int(round(i)) for i in np.rint(solution_vector)]
 
-
+# This function calls required dataset and is used to solve the problem.
 def solve_it(input_data):
     
     # This code requires the direction of input_data file.
