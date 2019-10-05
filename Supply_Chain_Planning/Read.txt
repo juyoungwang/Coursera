@@ -1,0 +1,4 @@
+This files are just course notes that I created (in iPython notebook) while reading the course materials.
+Although the course instructor was using Excel, I'm not that big fan of it, so I decided to do everything in Python.
+
+Codes in this folders are brief python summary of the course.
